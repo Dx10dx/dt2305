@@ -1,249 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Thivisha | A Love Story</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --pink:#ff758c;
-  --rose:#ff4d6d;
-  --gold:#d4af37;
-}
-
-*{box-sizing:border-box}
-
-body,html{
-  margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#000;
-  font-family:'Quicksand',sans-serif;
-  overflow:hidden;
-}
-
-/* ===== CINEMATIC BACKGROUND ===== */
-.bg-container{
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(circle at center,#fff0f3 0%,#ffcbd5 60%,#1a0005 100%);
-  animation:fadeIn 3s forwards;
-  z-index:1;
-}
-
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-
-.vignette{
-  position:fixed;
-  inset:0;
-  background:radial-gradient(circle,transparent 60%,rgba(0,0,0,.4));
-  z-index:2;
-  pointer-events:none;
-}
-
-/* ===== CONTENT ===== */
-.loader-content{
-  text-align:center;
-  z-index:5;
-  position:relative;
-}
-
-.names{
-  font-family:'Dancing Script',cursive;
-  font-size:3.8rem;
-  background:linear-gradient(90deg,#d02a50,#ff758c,#d02a50);
-  background-size:200%;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:shine 3s linear infinite;
-}
-
-@keyframes shine{to{background-position:200%}}
-
-.subtitle{
-  margin-top:8px;
-  font-weight:700;
-  letter-spacing:6px;
-  font-size:.85rem;
-  color:var(--rose);
-  opacity:0;
-  animation:slideUp 1.5s forwards .8s;
-}
-
-@keyframes slideUp{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-/* ===== HEART CORE ===== */
-.heart-wrapper{
-  position:relative;
-  margin:50px 0 30px;
-  perspective:600px;
-}
-
-.floating-heart{
-  font-size:5.2rem;
-  color:var(--rose);
-  animation:heartbeat 1.3s infinite;
-  filter:drop-shadow(0 20px 40px rgba(255,77,109,.6));
-  position:relative;
-  z-index:3;
-}
-
-@keyframes heartbeat{
-  0%{transform:scale(1)}
-  20%{transform:scale(1.25)}
-  40%{transform:scale(1)}
-  60%{transform:scale(1.15)}
-  100%{transform:scale(1)}
-}
-
-/* ===== HEART RIPPLE ===== */
-.ripple{
-  position:absolute;
-  top:50%;
-  left:50%;
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  border:2px solid rgba(255,77,109,.6);
-  transform:translate(-50%,-50%);
-  animation:ripple 1.3s infinite;
-}
-
-@keyframes ripple{
-  from{transform:translate(-50%,-50%) scale(.6);opacity:.6}
-  to{transform:translate(-50%,-50%) scale(2);opacity:0}
-}
-
-/* ===== PROGRESS ===== */
-.progress-container{
-  width:320px;
-  padding:6px;
-  background:rgba(255,255,255,.25);
-  border-radius:30px;
-  backdrop-filter:blur(8px);
-}
-
-.progress-bar{
-  height:8px;
-  background:rgba(255,255,255,.2);
-  border-radius:20px;
-  overflow:hidden;
-}
-
-.progress-fill{
-  height:100%;
-  width:0%;
-  background:linear-gradient(90deg,var(--rose),var(--pink));
-  box-shadow:0 0 20px var(--pink);
-  animation:load 4.5s forwards;
-}
-
-@keyframes load{to{width:100%}}
-
-#loading-text{
-  margin-top:20px;
-  font-size:.8rem;
-  letter-spacing:1px;
-  font-weight:600;
-  color:#5a0012;
-}
-
-/* ===== BOKEH ===== */
-.bokeh{
-  position:absolute;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(255,255,255,.8),transparent 70%);
-  pointer-events:none;
-  animation:bokehFloat linear infinite;
-}
-
-@keyframes bokehFloat{
-  from{transform:translateY(110vh) scale(.4);opacity:0}
-  20%{opacity:.4}
-  80%{opacity:.4}
-  to{transform:translateY(-20vh) scale(1.4);opacity:0}
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#100c22" />
+  <title>A little story for you</title>
+  <style>
+    :root{--ink:#fff9fb;--muted:rgba(255,249,251,.72);--glass:rgba(255,255,255,.115);--line:rgba(255,255,255,.22);--rose:#ff4f83;--violet:#7b65ff;--ease:cubic-bezier(.2,.8,.2,1)}
+    *{box-sizing:border-box} html,body{height:100%;margin:0;overflow:hidden;background:#1b1740;color:var(--ink);font-family:ui-rounded,"SF Pro Rounded","Segoe UI",system-ui,sans-serif} button,input{font:inherit} button{border:0;color:inherit;cursor:pointer}
+    #world{position:fixed;inset:0;overflow:hidden;background:linear-gradient(160deg,#8ed9ff 0%,#c5c1ff 54%,#f2a484 100%);transition:background 2s var(--ease)} body.night #world{background:linear-gradient(160deg,#0b102c 0%,#24113d 54%,#5b2551 100%)}
+    #world:before,#world:after{content:"";position:absolute;border-radius:50%;filter:blur(4px);pointer-events:none}#world:before{width:78vmax;height:78vmax;top:-42vmax;right:-22vmax;background:radial-gradient(circle,#fff8cf 0 4%,#ffe5a6aa 12%,transparent 45%);opacity:.85;transition:opacity 1.4s}body.night #world:before{opacity:.08}#world:after{width:100%;height:100%;inset:0;border-radius:0;background:linear-gradient(180deg,transparent 45%,rgba(37,8,38,.24));}
+    #aurora{position:absolute;width:110%;height:50%;left:-5%;bottom:-18%;background:radial-gradient(ellipse at 25% 100%,#ffbb8a88,transparent 46%),radial-gradient(ellipse at 74% 100%,#f474bf77,transparent 42%);filter:blur(25px);transition:opacity 1s}body.night #aurora{opacity:.2}
+    canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}.stars{opacity:0;transition:opacity 1.4s}body.night .stars{opacity:1}
+    .petal{position:absolute;top:-12vh;width:13px;height:18px;border-radius:80% 15% 80% 15%;background:linear-gradient(130deg,#ffe4ed,#e83f79 75%);opacity:.84;filter:drop-shadow(0 5px 5px #8e174844);animation:fall var(--t) linear var(--d) infinite;transform-origin:center} @keyframes fall{to{transform:translate3d(var(--x),116vh,0) rotate(680deg)}}
+    #app{position:relative;height:100dvh;z-index:3}.screen{position:absolute;inset:0;display:grid;place-items:center;padding:max(24px,env(safe-area-inset-top)) 24px max(24px,env(safe-area-inset-bottom));opacity:0;visibility:hidden;transform:scale(1.04);transition:opacity .75s var(--ease),transform .75s var(--ease),visibility .75s}.screen.active{opacity:1;visibility:visible;transform:scale(1)}
+    .card{width:min(92vw,650px);padding:clamp(28px,5vw,52px);text-align:center;border:1px solid var(--line);border-radius:32px;background:linear-gradient(145deg,rgba(255,255,255,.2),rgba(255,255,255,.065));box-shadow:0 30px 90px rgba(25,12,44,.22),inset 0 1px rgba(255,255,255,.24);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%)}
+    .eyebrow{margin:0 0 14px;color:#fff6fa;font-size:11px;font-weight:750;letter-spacing:.2em;text-transform:uppercase}.mark{width:58px;height:58px;margin:0 auto 20px;display:grid;place-items:center;border:1px solid #ffffff66;border-radius:20px;background:#ffffff24;box-shadow:0 10px 30px #550e3a33;font-size:25px;animation:float 3.5s ease-in-out infinite}@keyframes float{50%{transform:translateY(-9px) rotate(4deg)}}
+    h1{margin:0;font-size:clamp(39px,8vw,74px);line-height:.98;letter-spacing:-.065em;text-wrap:balance}h2{font-size:clamp(31px,5vw,49px);line-height:1.02;letter-spacing:-.055em;margin:0 0 18px;text-wrap:balance}p{font-size:clamp(16px,2.5vw,19px);line-height:1.6;margin:0;color:var(--muted);text-wrap:pretty}.lead{margin:19px auto 0;max-width:480px}.line{width:44px;height:2px;margin:25px auto;background:#fff;border-radius:3px;opacity:.7}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 24px;border-radius:999px;background:linear-gradient(120deg,#fb3d76,#ff7797);box-shadow:0 14px 30px #6b12366b,inset 0 1px #ffffff8c;font-weight:740;letter-spacing:-.015em;transition:transform .25s var(--ease),filter .25s}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn:active{transform:scale(.97)}.btn.ghost{background:#ffffff18;border:1px solid #ffffff4b;box-shadow:none}.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}.fine{font-size:12px;margin-top:17px;color:#fff8}
+    .date-row{display:flex;justify-content:center;gap:8px;margin:27px 0 3px}.date-row input{width:65px;padding:13px 7px;text-align:center;border:1px solid #ffffff55;border-radius:14px;outline:0;background:#ffffff18;color:#fff;font-weight:750;font-size:16px;backdrop-filter:blur(10px)}.date-row input:focus{border-color:#fff;background:#ffffff2b}.date-row input::placeholder{color:#fff9}.date-row input:nth-child(2){width:82px}.date-row input:nth-child(3){width:82px}.error{height:19px;margin:12px 0 -4px;color:#ffe1e8;font-size:13px;opacity:0;transition:opacity .2s}.error.show{opacity:1}
+    .progress{position:fixed;z-index:10;top:max(18px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);display:flex;gap:8px;opacity:0;transition:opacity .4s}.progress.show{opacity:1}.dot{width:7px;height:7px;border-radius:99px;background:#fff6;transition:width .4s,background .4s}.dot.on{width:24px;background:#fff}
+    .story-card{position:relative;width:min(92vw,760px);min-height:min(550px,75dvh);padding:clamp(26px,5vw,58px);display:flex;flex-direction:column;justify-content:center;text-align:center;border-radius:36px;background:linear-gradient(140deg,#ffffff22,#ffffff08);border:1px solid #ffffff30;box-shadow:0 30px 85px #180b2d36;backdrop-filter:blur(19px)}.scene-label{position:absolute;top:28px;left:32px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff9}.chapter{font-family:Georgia,serif;color:#ffe5ec;font-size:18px;font-style:italic;margin-bottom:18px}.copy{max-width:555px;margin:0 auto;font-size:clamp(17px,2.4vw,21px)}.copy b{color:#fff}.story-card .actions{margin-top:35px}.next{min-width:145px}.quote{margin:22px auto 0;max-width:490px;padding:18px 22px;border-left:2px solid #ffc1d2;background:#ffffff0d;border-radius:0 16px 16px 0;color:#fff9;font-family:Georgia,serif;font-size:18px;line-height:1.5}
+    #proposal .card{width:min(92vw,740px);position:relative;overflow:visible}#proposal h1{font-size:clamp(43px,8vw,76px)}.ring{width:112px;height:112px;margin:0 auto 26px;position:relative;border:13px solid #f7d58a;border-radius:50%;box-shadow:0 0 0 5px #ffffff40,0 0 35px #fdd67988;animation:ring 2.4s ease-in-out infinite}.ring:before{content:"✦";position:absolute;top:-47px;left:30px;color:#fff7c4;font-size:52px;text-shadow:0 0 22px #fff}@keyframes ring{50%{transform:rotate(6deg) scale(1.08);box-shadow:0 0 0 5px #ffffff60,0 0 60px #fdd679cc}}#no{position:relative}.answer{min-width:124px}.success{display:none;margin-top:22px;font-size:18px;color:#fff}.success.show{display:block;animation:rise .7s var(--ease) both}@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+    .poem{display:none;max-width:510px;margin:23px auto 0;padding:18px 20px;border-top:1px solid #ffffff3d;color:#fff7d9;font-family:Georgia,"Noto Serif Tamil",serif;font-size:16px;line-height:1.75}.poem.show{display:block;animation:rise .8s .2s var(--ease) both}.music{position:fixed;right:18px;bottom:max(18px,env(safe-area-inset-bottom));z-index:11;width:44px;height:44px;border-radius:50%;background:#ffffff20;border:1px solid #ffffff45;backdrop-filter:blur(12px);font-size:17px;opacity:0;pointer-events:none;transition:opacity .4s}.music.show{opacity:1;pointer-events:auto}.music.playing{animation:pulse 1.3s infinite}@keyframes pulse{50%{box-shadow:0 0 0 9px #fff2}}
+    @media(max-width:540px){.card{border-radius:26px}.story-card{min-height:560px;border-radius:28px}.scene-label{left:25px;top:22px}.actions{margin-top:25px}.btn{min-height:50px;padding:0 20px}.date-row{gap:6px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
 </head>
-
 <body>
-
-<div class="bg-container" id="bg"></div>
-<div class="vignette"></div>
-
-<div class="loader-content">
-  <div class="names">From Danaselan to Thivisha</div>
-  <div class="subtitle">A Journey Worth Living</div>
-
-  <div class="heart-wrapper">
-    <div class="ripple"></div>
-    <i class="fas fa-heart floating-heart"></i>
-  </div>
-
-  <div class="progress-container">
-    <div class="progress-bar">
-      <div class="progress-fill"></div>
-    </div>
-  </div>
-
-  <p id="loading-text">Preparing our world...</p>
-</div>
-
-<script>
-/* Loading phrases */
-const phrases=[
-  "Gathering the stars...",
-  "Reviving sweet memories...",
-  "Polishing the diamonds...",
-  "Preparing my heart...",
-  "Ready for you..."
-];
-
-let i=0;
-setInterval(()=>{
-  if(i<phrases.length){
-    const t=document.getElementById("loading-text");
-    t.style.opacity=0;
-    setTimeout(()=>{
-      t.innerText=phrases[i++];
-      t.style.opacity=1;
-    },400);
-  }
-},900);
-
-/* Bokeh generator */
-const bg=document.getElementById("bg");
-setInterval(()=>{
-  const b=document.createElement("div");
-  b.className="bokeh";
-  const size=Math.random()*80+30;
-  b.style.width=b.style.height=size+"px";
-  b.style.left=Math.random()*100+"vw";
-  const dur=Math.random()*10+12;
-  b.style.animationDuration=dur+"s";
-  bg.appendChild(b);
-  setTimeout(()=>b.remove(),dur*1000);
-},500);
-
-/* Transition */
-setTimeout(()=>{
-  document.body.style.transition="opacity 1.2s ease";
-  document.body.style.opacity="0";
-  setTimeout(()=>{
-    window.location.href="dashboard.html";
-  },1200);
-},5200);
-</script>
-
+  <div id="world"><div id="aurora"></div><canvas id="fx"></canvas><canvas id="stars" class="stars"></canvas><div id="petals"></div></div>
+  <main id="app">
+    <nav class="progress" id="progress" aria-label="Story progress"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></nav>
+    <section class="screen active" id="intro"><div class="card"><div class="mark">♡</div><p class="eyebrow">For Tharshu — a private little universe</p><h1>For Tharshu,<br>who feels like home.</h1><div class="line"></div><p class="lead">Before we begin, there is something only you would know.</p><div class="actions"><button class="btn" data-go="verify">Open the story <span>→</span></button></div></div></section>
+    <section class="screen" id="verify"><div class="card"><div class="mark">✦</div><p class="eyebrow">A small key</p><h2>A date you know<br>by heart.</h2><p>Enter <b>my birthday</b> to unlock this little surprise.</p><div class="date-row"><input id="day" inputmode="numeric" maxlength="2" placeholder="DD" aria-label="Day"><input id="month" inputmode="numeric" maxlength="2" placeholder="MM" aria-label="Month"><input id="year" inputmode="numeric" maxlength="4" placeholder="YYYY" aria-label="Year"></div><div class="error" id="error">Not quite. Try my birthday—the date written in your heart.</div><div class="actions"><button class="btn ghost" data-go="intro">Back</button><button class="btn" id="unlock">Unlock <span>♡</span></button></div><p class="fine">DD / MM / YYYY</p></div></section>
+    <section class="screen" id="story1"><article class="story-card"><span class="scene-label">01 — an honest beginning</span><p class="chapter">A note from my heart…</p><h2>I am sorry<br>for the hurt between us.</h2><p class="copy">I am sorry for the arguments, for the times our communication became too little, and for being so busy with work that I left out the bonding we both deserved.</p><blockquote class="quote">I cannot undo those moments—but I can show up differently from now on.</blockquote><div class="actions"><button class="btn next" data-go="story2">Let me explain <span>→</span></button></div></article></section>
+    <section class="screen" id="story2"><article class="story-card"><span class="scene-label">02 — starting over, properly</span><p class="chapter">No rushing. No pretending.</p><h2>Can we begin again<br>as friends?</h2><p class="copy">I want to rebuild this with patience: more conversations, more laughter, more time truly knowing how you feel and what you need.</p><div class="line"></div><p class="copy">From friends, to <b>best friends</b>—with trust, care, and a bond that becomes stronger each day.</p><div class="actions"><button class="btn next" data-go="story3">One promise <span>→</span></button></div></article></section>
+    <section class="screen" id="story3"><article class="story-card"><span class="scene-label">03 — deeper than before</span><p class="chapter">When the time is right…</p><h2>Then, let love<br>grow the right way.</h2><p class="copy">I want us to understand each other more deeply: our hopes, our fears, our habits, and the kind of future we both choose—not just dream about.</p><blockquote class="quote">Before marriage, I want us to have the kind of bond that makes every promise feel safe, certain, and true.</blockquote><div class="actions"><button class="btn next" data-go="proposal">Will you try with me? <span>♡</span></button></div></article></section>
+    <section class="screen" id="proposal"><div class="card"><div class="ring"></div><p class="eyebrow">One gentle question for Tharshu</p><h1>Tharshu, will you<br>start again with me?</h1><p class="lead">Friends first. Then best friends. Then a love built on deeper understanding, honest communication, and all the time we need before marriage.</p><div class="actions"><button class="btn answer" id="yes">Yes, let’s try ♡</button><button class="btn ghost answer" id="no">No</button></div><p class="success" id="success">Thank you for giving us a new beginning. ✨<br><small>I will treasure it—and do better—with all my heart.</small></p><div class="poem" id="poem" lang="ta">உன்னை நினைக்காத ஒரு விடியலும் இல்லை,<br>உன் சிரிப்பை காணாத ஒரு கனவும் இல்லை.<br>காதல் என்பது உன்னோடு வாழும் ஆசை மட்டுமல்ல,<br>உன்னால் உயிர் வாழும் உணர்வும் தான்.</div></div></section>
+  </main>
+  <button class="music" id="music" aria-label="Toggle ambient music" title="Toggle ambient music">♪</button>
+  <script>
+    /* MY BIRTHDAY — edit these values only if needed */
+    const CONFIG={birthday:{day:'10',month:'02',year:'2001'},recipient:'my love',reduced:matchMedia('(prefers-reduced-motion: reduce)').matches};
+    const order=['intro','verify','story1','story2','story3','proposal']; let active='intro', audio=null;
+    const progress=document.querySelector('#progress'), dots=[...document.querySelectorAll('.dot')];
+    function go(id){document.getElementById(active).classList.remove('active');document.getElementById(id).classList.add('active');active=id;const n=['story1','story2','story3','proposal'].indexOf(id);progress.classList.toggle('show',n>=0);dots.forEach((d,i)=>d.classList.toggle('on',i<=n));document.body.classList.toggle('night',id==='story3'||id==='proposal');if(id!=='intro'&&id!=='verify')document.querySelector('#music').classList.add('show');}
+    document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
+    const error=document.querySelector('#error'); document.querySelector('#unlock').addEventListener('click',()=>{const val={day:day.value.padStart(2,'0'),month:month.value.padStart(2,'0'),year:year.value};if(Object.entries(CONFIG.birthday).every(([k,v])=>val[k]===v)){error.classList.remove('show');go('story1')}else{error.classList.add('show');document.querySelector('#verify .card').animate([{transform:'translateX(0)'},{transform:'translateX(-10px)'},{transform:'translateX(9px)'},{transform:'translateX(0)'}],{duration:370})}});
+    [day,month,year].forEach((e,i)=>e.addEventListener('input',()=>{if(e.value.length===e.maxLength&&i<2)[month,year][i].focus()}));
+    /* Canvas: petals, night sky, fireworks, confetti */
+    const fx=document.querySelector('#fx'), ctx=fx.getContext('2d'), sc=document.querySelector('#stars'), sx=sc.getContext('2d');let w,h,dpr,particles=[],fireworks=[];
+    function size(){dpr=Math.min(devicePixelRatio,2);w=innerWidth;h=innerHeight;[fx,sc].forEach(c=>{c.width=w*dpr;c.height=h*dpr;c.style.width=w+'px';c.style.height=h+'px'});ctx.setTransform(dpr,0,0,dpr,0,0);sx.setTransform(dpr,0,0,dpr,0,0);stars()};addEventListener('resize',size);
+    function stars(){sx.clearRect(0,0,w,h);for(let i=0;i<Math.min(170,w/5);i++){let x=Math.random()*w,y=Math.random()*h*.78,r=Math.random()*1.35+.2;sx.fillStyle=`rgba(255,255,255,${Math.random()*.7+.18})`;sx.beginPath();sx.arc(x,y,r,0,7);sx.fill()}sx.fillStyle='#fff6d1';sx.shadowColor='#fff';sx.shadowBlur=22;sx.beginPath();sx.arc(w*.78,h*.18,34,0,7);sx.fill();sx.shadowBlur=0}
+    function petal(){const e=document.createElement('i');e.className='petal';e.style.left=Math.random()*100+'vw';e.style.setProperty('--x',(Math.random()*220-110)+'px');e.style.setProperty('--t',(Math.random()*8+8)+'s');e.style.setProperty('--d',(-Math.random()*15)+'s');e.style.transform=`scale(${.45+Math.random()*.85})`;document.querySelector('#petals').append(e)}for(let i=0;i<25;i++)petal();
+    function burst(x,y){for(let i=0;i<95;i++){const a=Math.random()*Math.PI*2,s=Math.random()*4+1.4;fireworks.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:1,decay:Math.random()*.014+.012,color:`hsl(${Math.random()*70+310},100%,${Math.random()*25+60}%)`})}}
+    function confetti(){for(let i=0;i<150;i++)particles.push({x:Math.random()*w,y:-Math.random()*h,vx:Math.random()*3-1.5,vy:Math.random()*3+2,r:Math.random()*6+3,a:Math.random()*6,c:['#ff4f83','#ffd66b','#8bcfff','#d1a7ff','#fff'][i%5],spin:Math.random()*.2-.1})}
+    function loop(){ctx.clearRect(0,0,w,h);particles=particles.filter(p=>p.y<h+20);particles.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.035;p.a+=p.spin;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.a);ctx.fillStyle=p.c;ctx.fillRect(-p.r/2,-p.r/3,p.r,p.r*.66);ctx.restore()});fireworks=fireworks.filter(p=>p.life>0);fireworks.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.025;p.life-=p.decay;ctx.globalAlpha=Math.max(0,p.life);ctx.fillStyle=p.color;ctx.shadowColor=p.color;ctx.shadowBlur=8;ctx.fillRect(p.x,p.y,2.3,2.3);ctx.globalAlpha=1;ctx.shadowBlur=0});requestAnimationFrame(loop)}size();loop();
+    const no=document.querySelector('#no');no.addEventListener('pointerenter',escape);no.addEventListener('click',escape);function escape(){const x=(Math.random()-.5)*Math.min(300,w*.55),y=(Math.random()-.5)*150;no.style.transform=`translate(${x}px,${y}px)`;no.textContent=['Maybe?','Are you sure?','Think again!','Too slow ✨'][Math.floor(Math.random()*4)]}
+    document.querySelector('#yes').addEventListener('click',()=>{document.querySelector('#success').classList.add('show');document.querySelector('#poem').classList.add('show');document.querySelector('#no').style.display='none';confetti();burst(w*.2,h*.3);setTimeout(()=>burst(w*.75,h*.25),350);setTimeout(()=>burst(w*.5,h*.42),650);});
+    /* Gentle synthesized ambient pad; no external audio file required. */
+    document.querySelector('#music').addEventListener('click',function(){if(!audio){const AC=window.AudioContext||window.webkitAudioContext;const ac=new AC(),gain=ac.createGain();gain.gain.value=.025;gain.connect(ac.destination);const notes=[220,277.18,329.63];notes.forEach((n,i)=>{const o=ac.createOscillator();o.type='sine';o.frequency.value=n;o.detune.value=i*4;o.connect(gain);o.start()});audio={ac,gain}}if(audio.ac.state==='suspended'){audio.ac.resume();this.classList.add('playing');this.textContent='♫'}else{audio.ac.suspend();this.classList.remove('playing');this.textContent='♪'}});
+  </script>
 </body>
 </html>
